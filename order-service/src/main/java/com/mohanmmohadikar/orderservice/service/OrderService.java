@@ -1,13 +1,19 @@
 package com.mohanmmohadikar.orderservice.service;
 
-import com.mohanmmohadikar.orderservice.dto.OrderLineItemsDto;import com.mohanmmohadikar.orderservice.dto.OrderRequest;import com.mohanmmohadikar.orderservice.model.Order;
+import com.mohanmmohadikar.orderservice.dto.OrderLineItemsDto;
+import com.mohanmmohadikar.orderservice.dto.OrderRequest;
+import com.mohanmmohadikar.orderservice.model.Order;
 import com.mohanmmohadikar.orderservice.model.OrderLineItems;
-import com.mohanmmohadikar.orderservice.repository.OrderRepository;import java.util.List;import java.util.UUID;
+import com.mohanmmohadikar.orderservice.repository.OrderRepository;
+import java.util.List;
+import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderService {
 
   private final OrderRepository orderRepository;
